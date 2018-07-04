@@ -71,46 +71,6 @@ This gallery contains a selection examples of what Verde can do.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Scipy offers a range of interpolation methods in :mod:`scipy.interpolate` and 3 specifically fo...">
-
-.. only:: html
-
-    .. figure:: /gallery/images/thumb/sphx_glr_scipygridder_thumb.png
-
-        :ref:`sphx_glr_gallery_scipygridder.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /gallery/scipygridder
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="The :class:`verde.Chain` class allows us to created gridders that perform multiple operations o...">
-
-.. only:: html
-
-    .. figure:: /gallery/images/thumb/sphx_glr_chain_trend_thumb.png
-
-        :ref:`sphx_glr_gallery_chain_trend.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /gallery/chain_trend
-
-.. raw:: html
-
     <div class="sphx-glr-thumbcontainer" tooltip="Verde offers the :class:`verde.Trend` class to fit a 2D polynomial trend to your data. This can...">
 
 .. only:: html
@@ -148,6 +108,46 @@ This gallery contains a selection examples of what Verde can do.
    :hidden:
 
    /gallery/blockmean_weights
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="The :class:`verde.Chain` class allows us to created gridders that perform multiple operations o...">
+
+.. only:: html
+
+    .. figure:: /gallery/images/thumb/sphx_glr_chain_trend_thumb.png
+
+        :ref:`sphx_glr_gallery_chain_trend.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /gallery/chain_trend
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Scipy offers a range of interpolation methods in :mod:`scipy.interpolate` and 3 specifically fo...">
+
+.. only:: html
+
+    .. figure:: /gallery/images/thumb/sphx_glr_scipygridder_thumb.png
+
+        :ref:`sphx_glr_gallery_scipygridder.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /gallery/scipygridder
 
 .. raw:: html
 
@@ -212,108 +212,6 @@ This gallery contains a selection examples of what Verde can do.
 
     <div style='clear:both'></div>
 
-Synthetic and sample datasets
------------------------------
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="The :class:`verde.datasets.CheckerBoard` class generates synthetic data in a checkerboard patte...">
-
-.. only:: html
-
-    .. figure:: /gallery/data/images/thumb/sphx_glr_synthetic_checkerboard_thumb.png
-
-        :ref:`sphx_glr_gallery_data_synthetic_checkerboard.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /gallery/data/synthetic_checkerboard
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="We provide sample bathymetry data from Baja California to test the gridding methods. This is th...">
-
-.. only:: html
-
-    .. figure:: /gallery/data/images/thumb/sphx_glr_sample_baja_bathymetry_thumb.png
-
-        :ref:`sphx_glr_gallery_data_sample_baja_bathymetry.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /gallery/data/sample_baja_bathymetry
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="We provide sample total-field magnetic anomaly data from an airborne survey of Rio de Janeiro, ...">
-
-.. only:: html
-
-    .. figure:: /gallery/data/images/thumb/sphx_glr_sample_rio_magnetic_anomaly_thumb.png
-
-        :ref:`sphx_glr_gallery_data_sample_rio_magnetic_anomaly.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /gallery/data/sample_rio_magnetic_anomaly
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="We provide sample 3-component GPS velocity data from the West coast of the U.S. The data were c...">
-
-.. only:: html
-
-    .. figure:: /gallery/data/images/thumb/sphx_glr_sample_california_gps_thumb.png
-
-        :ref:`sphx_glr_gallery_data_sample_california_gps.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /gallery/data/sample_california_gps
-.. raw:: html
-
-    <div style='clear:both'></div>
-
-
-
-.. container:: sphx-glr-footer
-
-
-  .. container:: sphx-glr-download
-
-    :download:`Download all examples in Python source code: gallery_python.zip <//home/travis/build/fatiando/verde/doc/gallery/gallery_python.zip>`
-
-
-
-  .. container:: sphx-glr-download
-
-    :download:`Download all examples in Jupyter notebooks: gallery_jupyter.zip <//home/travis/build/fatiando/verde/doc/gallery/gallery_jupyter.zip>`
 
 .. rst-class:: sphx-glr-signature
 

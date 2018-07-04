@@ -94,13 +94,17 @@
               
             
             
-              <p class="caption"><span class="caption-text">Documentation</span></p>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Installing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../gallery/index.html">Gallery</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sample_data/index.html">Sample Data</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/decimation.html">Data decimation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/weights.html">Using weights</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
 </ul>
 
@@ -109,7 +113,11 @@
 
     
         <p class="caption">
-            <span class="caption-text">External links</span>
+            <span class="caption-text">
+            
+                Getting help and contributing
+            
+            </span>
         </p>
         <ul>
             
@@ -201,7 +209,7 @@
 <span class="kn">from</span> <span class="nn">.coordinates</span> <span class="k">import</span> <span class="n">get_region</span>
 
 
-<div class="viewcode-block" id="Vector2D"><a class="viewcode-back" href="../../api/verde.Vector2D.html#verde.Vector2D">[docs]</a><span class="k">class</span> <span class="nc">Vector2D</span><span class="p">(</span><span class="n">Spline</span><span class="p">):</span>
+<div class="viewcode-block" id="Vector2D"><a class="viewcode-back" href="../../api/generated/verde.Vector2D.html#verde.Vector2D">[docs]</a><span class="k">class</span> <span class="nc">Vector2D</span><span class="p">(</span><span class="n">Spline</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Elastically coupled interpolation of 2-component vector data.</span>
 
@@ -278,13 +286,21 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">poisson</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">fudge</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">,</span> <span class="n">damping</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">spacing</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">poisson</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+        <span class="n">fudge</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">,</span>
+        <span class="n">damping</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">shape</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">spacing</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">region</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">poisson</span> <span class="o">=</span> <span class="n">poisson</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">fudge</span><span class="o">=</span><span class="n">fudge</span><span class="p">,</span> <span class="n">damping</span><span class="o">=</span><span class="n">damping</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="n">shape</span><span class="p">,</span>
-                         <span class="n">spacing</span><span class="o">=</span><span class="n">spacing</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="n">region</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">fudge</span><span class="o">=</span><span class="n">fudge</span><span class="p">,</span> <span class="n">damping</span><span class="o">=</span><span class="n">damping</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="n">shape</span><span class="p">,</span> <span class="n">spacing</span><span class="o">=</span><span class="n">spacing</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="n">region</span>
+        <span class="p">)</span>
 
-<div class="viewcode-block" id="Vector2D.fit"><a class="viewcode-back" href="../../api/verde.Vector2D.html#verde.Vector2D.fit">[docs]</a>    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Vector2D.fit"><a class="viewcode-back" href="../../api/generated/verde.Vector2D.html#verde.Vector2D.fit">[docs]</a>    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Fit the gridder to the given 2-component vector data.</span>
 
@@ -315,11 +331,13 @@
 <span class="sd">            Returns this estimator instance for chaining operations.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">coordinates</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">weights</span> <span class="o">=</span> <span class="n">check_fit_input</span><span class="p">(</span><span class="n">coordinates</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span>
-                                                     <span class="n">weights</span><span class="p">,</span> <span class="n">unpack</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">coordinates</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">weights</span> <span class="o">=</span> <span class="n">check_fit_input</span><span class="p">(</span>
+            <span class="n">coordinates</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">unpack</span><span class="o">=</span><span class="kc">False</span>
+        <span class="p">)</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Need two data components. Only </span><span class="si">{}</span><span class="s2"> given.&quot;</span>
-                             <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)))</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;Need two data components. Only </span><span class="si">{}</span><span class="s2"> given.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+            <span class="p">)</span>
         <span class="c1"># Capture the data region to use as a default when gridding.</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">region_</span> <span class="o">=</span> <span class="n">get_region</span><span class="p">(</span><span class="n">coordinates</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">force_coords_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_force_coordinates</span><span class="p">(</span><span class="n">coordinates</span><span class="p">)</span>
@@ -329,12 +347,13 @@
             <span class="n">weights</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_check_weighted_exact_solution</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span>
         <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">i</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">data</span><span class="p">])</span>
-        <span class="n">jacobian</span> <span class="o">=</span> <span class="n">vector2d_jacobian</span><span class="p">(</span><span class="n">coordinates</span><span class="p">[:</span><span class="mi">2</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">force_coords_</span><span class="p">,</span>
-                                     <span class="bp">self</span><span class="o">.</span><span class="n">poisson</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fudge</span><span class="p">)</span>
+        <span class="n">jacobian</span> <span class="o">=</span> <span class="n">vector2d_jacobian</span><span class="p">(</span>
+            <span class="n">coordinates</span><span class="p">[:</span><span class="mi">2</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">force_coords_</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">poisson</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fudge</span>
+        <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">force_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_estimate_forces</span><span class="p">(</span><span class="n">jacobian</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span></div>
 
-<div class="viewcode-block" id="Vector2D.predict"><a class="viewcode-back" href="../../api/verde.Vector2D.html#verde.Vector2D.predict">[docs]</a>    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">):</span>
+<div class="viewcode-block" id="Vector2D.predict"><a class="viewcode-back" href="../../api/generated/verde.Vector2D.html#verde.Vector2D.predict">[docs]</a>    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Evaluate the fitted gridder on the given set of points.</span>
 
@@ -355,17 +374,19 @@
 <span class="sd">            predicted vector data values at each point.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">check_is_fitted</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;force_&#39;</span><span class="p">,</span> <span class="s1">&#39;force_coords_&#39;</span><span class="p">])</span>
-        <span class="n">jac</span> <span class="o">=</span> <span class="n">vector2d_jacobian</span><span class="p">(</span><span class="n">coordinates</span><span class="p">[:</span><span class="mi">2</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">force_coords_</span><span class="p">,</span>
-                                <span class="bp">self</span><span class="o">.</span><span class="n">poisson</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fudge</span><span class="p">)</span>
+        <span class="n">check_is_fitted</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;force_&quot;</span><span class="p">,</span> <span class="s2">&quot;force_coords_&quot;</span><span class="p">])</span>
+        <span class="n">jac</span> <span class="o">=</span> <span class="n">vector2d_jacobian</span><span class="p">(</span>
+            <span class="n">coordinates</span><span class="p">[:</span><span class="mi">2</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">force_coords_</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">poisson</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fudge</span>
+        <span class="p">)</span>
         <span class="n">cast</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">broadcast</span><span class="p">(</span><span class="o">*</span><span class="n">coordinates</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
         <span class="n">npoints</span> <span class="o">=</span> <span class="n">cast</span><span class="o">.</span><span class="n">size</span>
         <span class="n">components</span> <span class="o">=</span> <span class="n">jac</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">force_</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="n">npoints</span><span class="p">))</span>
         <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">comp</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">cast</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="k">for</span> <span class="n">comp</span> <span class="ow">in</span> <span class="n">components</span><span class="p">)</span></div></div>
 
 
-<div class="viewcode-block" id="vector2d_jacobian"><a class="viewcode-back" href="../../api/verde.vector2d_jacobian.html#verde.vector2d_jacobian">[docs]</a><span class="k">def</span> <span class="nf">vector2d_jacobian</span><span class="p">(</span><span class="n">coordinates</span><span class="p">,</span> <span class="n">force_coordinates</span><span class="p">,</span> <span class="n">poisson</span><span class="p">,</span> <span class="n">fudge</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">,</span>
-                      <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float32&quot;</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">vector2d_jacobian</span><span class="p">(</span>
+    <span class="n">coordinates</span><span class="p">,</span> <span class="n">force_coordinates</span><span class="p">,</span> <span class="n">poisson</span><span class="p">,</span> <span class="n">fudge</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float32&quot;</span>
+<span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Make the Jacobian matrix for the 2D coupled elastic deformation.</span>
 
@@ -411,28 +432,29 @@
 <span class="sd">    verde.Vector2D : Coupled gridder for 2-component vector data</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">force_coordinates</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
-                         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">force_coordinates</span><span class="p">[:</span><span class="mi">2</span><span class="p">]]</span>
+    <span class="n">force_coordinates</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">force_coordinates</span><span class="p">[:</span><span class="mi">2</span><span class="p">]]</span>
     <span class="n">coordinates</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">coordinates</span><span class="p">[:</span><span class="mi">2</span><span class="p">]]</span>
     <span class="n">npoints</span> <span class="o">=</span> <span class="n">coordinates</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">size</span>
     <span class="n">nforces</span> <span class="o">=</span> <span class="n">force_coordinates</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">size</span>
     <span class="c1"># Reshaping the data coordinates to a column vector will automatically</span>
     <span class="c1"># build a distance matrix between each data point and force.</span>
-    <span class="n">east</span><span class="p">,</span> <span class="n">north</span> <span class="o">=</span> <span class="p">(</span><span class="n">datac</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">npoints</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">-</span> <span class="n">forcec</span>
-                   <span class="k">for</span> <span class="n">datac</span><span class="p">,</span> <span class="n">forcec</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">coordinates</span><span class="p">,</span> <span class="n">force_coordinates</span><span class="p">))</span>
+    <span class="n">east</span><span class="p">,</span> <span class="n">north</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">datac</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">npoints</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">-</span> <span class="n">forcec</span>
+        <span class="k">for</span> <span class="n">datac</span><span class="p">,</span> <span class="n">forcec</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">coordinates</span><span class="p">,</span> <span class="n">force_coordinates</span><span class="p">)</span>
+    <span class="p">)</span>
     <span class="n">distance</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hypot</span><span class="p">(</span><span class="n">east</span><span class="p">,</span> <span class="n">north</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
     <span class="c1"># The fudge factor helps avoid singular matrices when the force and</span>
     <span class="c1"># computation point are too close</span>
     <span class="n">distance</span> <span class="o">+=</span> <span class="n">fudge</span>
     <span class="c1"># Pre-compute common terms for the Green&#39;s functions of each component</span>
-    <span class="n">ln_r</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span> <span class="o">-</span> <span class="n">poisson</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">distance</span><span class="p">)</span>
-    <span class="n">over_r2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">poisson</span><span class="p">)</span><span class="o">/</span><span class="n">distance</span><span class="o">**</span><span class="mi">2</span>
-    <span class="n">jac</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">npoints</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="n">nforces</span><span class="o">*</span><span class="mi">2</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
-    <span class="n">jac</span><span class="p">[:</span><span class="n">npoints</span><span class="p">,</span> <span class="p">:</span><span class="n">nforces</span><span class="p">]</span> <span class="o">=</span> <span class="n">ln_r</span> <span class="o">+</span> <span class="n">over_r2</span><span class="o">*</span><span class="n">north</span><span class="o">**</span><span class="mi">2</span>  <span class="c1"># J_ee</span>
-    <span class="n">jac</span><span class="p">[</span><span class="n">npoints</span><span class="p">:,</span> <span class="n">nforces</span><span class="p">:]</span> <span class="o">=</span> <span class="n">ln_r</span> <span class="o">+</span> <span class="n">over_r2</span><span class="o">*</span><span class="n">east</span><span class="o">**</span><span class="mi">2</span>  <span class="c1"># J_nn</span>
-    <span class="n">jac</span><span class="p">[:</span><span class="n">npoints</span><span class="p">,</span> <span class="n">nforces</span><span class="p">:]</span> <span class="o">=</span> <span class="o">-</span><span class="n">over_r2</span><span class="o">*</span><span class="n">east</span><span class="o">*</span><span class="n">north</span>  <span class="c1"># J_ne</span>
+    <span class="n">ln_r</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span> <span class="o">-</span> <span class="n">poisson</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">distance</span><span class="p">)</span>
+    <span class="n">over_r2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">poisson</span><span class="p">)</span> <span class="o">/</span> <span class="n">distance</span> <span class="o">**</span> <span class="mi">2</span>
+    <span class="n">jac</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">npoints</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nforces</span> <span class="o">*</span> <span class="mi">2</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="n">jac</span><span class="p">[:</span><span class="n">npoints</span><span class="p">,</span> <span class="p">:</span><span class="n">nforces</span><span class="p">]</span> <span class="o">=</span> <span class="n">ln_r</span> <span class="o">+</span> <span class="n">over_r2</span> <span class="o">*</span> <span class="n">north</span> <span class="o">**</span> <span class="mi">2</span>  <span class="c1"># J_ee</span>
+    <span class="n">jac</span><span class="p">[</span><span class="n">npoints</span><span class="p">:,</span> <span class="n">nforces</span><span class="p">:]</span> <span class="o">=</span> <span class="n">ln_r</span> <span class="o">+</span> <span class="n">over_r2</span> <span class="o">*</span> <span class="n">east</span> <span class="o">**</span> <span class="mi">2</span>  <span class="c1"># J_nn</span>
+    <span class="n">jac</span><span class="p">[:</span><span class="n">npoints</span><span class="p">,</span> <span class="n">nforces</span><span class="p">:]</span> <span class="o">=</span> <span class="o">-</span><span class="n">over_r2</span> <span class="o">*</span> <span class="n">east</span> <span class="o">*</span> <span class="n">north</span>  <span class="c1"># J_ne</span>
     <span class="n">jac</span><span class="p">[</span><span class="n">npoints</span><span class="p">:,</span> <span class="p">:</span><span class="n">nforces</span><span class="p">]</span> <span class="o">=</span> <span class="n">jac</span><span class="p">[:</span><span class="n">npoints</span><span class="p">,</span> <span class="n">nforces</span><span class="p">:]</span>  <span class="c1"># J is symmetric</span>
-    <span class="k">return</span> <span class="n">jac</span></div>
+    <span class="k">return</span> <span class="n">jac</span>
 </pre></div>
 
            </div>
@@ -446,7 +468,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2018-2018, Leonardo Uieda.
-      Last updated on Jun 14, 2018.
+      Last updated on Jul 04, 2018.
 
     </p>
   </div>
